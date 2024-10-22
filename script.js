@@ -11,7 +11,7 @@ button.addEventListener("click", (e) => {
     if(content) {
 
         deleteButton.textContent = "X"
-        localStorage.setItem(" texts", content);
+        localStorage.setItem("userName", content);
 
         textContent.appendChild(tagP);
         textContent.appendChild(deleteButton);
@@ -22,7 +22,7 @@ button.addEventListener("click", (e) => {
         deleteButton.addEventListener("click", () => {
             tagP.remove();
             deleteButton.remove();
-    
+            localStorage.removeItem("userName");
         })
     }
     deleteElement();
